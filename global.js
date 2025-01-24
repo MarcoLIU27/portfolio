@@ -82,9 +82,7 @@ form?.addEventListener("submit", function (event) {
     let mailtoURL = form.action + "?";
     let params = [];
     for (let [name, value] of data) {
-      //params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
-      params.push(`${name}=${value}`);
-      console.log(name, value);
+      params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
     }
     mailtoURL += params.join("&");
 
