@@ -1,9 +1,10 @@
 :root {
-    --color-accent: oklch(82% 0.1 200);
+    --color-accent: oklch(82% 0.1 200 / 40%);
 }
 
 html {
     accent-color: var(--color-accent);
+    color-scheme: light dark;
 }
 
 body {
@@ -11,8 +12,8 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    max-width: 100ch; 
-    margin-inline: max(1em, (100% - 100ch) / 2);
+    max-width: 120ch; 
+    margin-inline: max(1em, (100% - 120ch) / 2);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,6 +22,16 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 400%;
+    text-align: center;
+    margin: 2rem;
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
 }
 
 nav {
@@ -48,6 +59,20 @@ nav a:hover {
     background-color: oklch(from var(--color-accent) 95% 5% h);
     padding-bottom: 0.1em;
 }
+
+@media (prefers-color-scheme: dark) {
+    nav a:hover {
+      background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    }
+  }
+
+.intro {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 .contact {
     display: grid;
@@ -84,20 +109,9 @@ nav a:hover {
 
 .resume {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.resume h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #2c3e50;
 }
 
 .resume section {
-    background: #ffffff;
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
