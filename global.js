@@ -70,3 +70,25 @@ select.addEventListener("input", function (event) {
     setColorScheme(newScheme);
     localStorage.setItem("colorScheme", newScheme);
 });
+
+// Fix the contact form
+const form = document.querySelector("#contact-form");
+
+form?.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const data = new FormData(form);
+
+    let mailtoURL = form.action + "?";
+    let params = [];
+    for (let [name, value] of data) {
+      //params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
+      params.push(`${name}=${value}`);
+      console.log(name, value);
+    }
+    mailtoURL += params.join("&");
+
+    // Open the mail client
+    location.href = mailtoURL;
+});
+
