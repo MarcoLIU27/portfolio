@@ -8,11 +8,29 @@
     <title>Haoyu Liu: Personal site and portfolio</title>
 </head>
 <body>
-    <h1> Haoyu Liu </h1>
-    <div class="intro">
-        <img src="images/avatar-1.jpg" alt="my photo" width="200" height="200">
-        <p> Hi, I'm Marco Liu, a Master's student in Computer Science at UC San Diego. I'm a Full Stack Developer experienced in both Frontend (React, Typescript, Next.js) and backend (Node.js, Express, Nest.js, Python, Spring Boot). My expertise also extends to database management with MySQL, PostgreSQL, and MongoDB, as well as cloud services with AWS and Azure. My current interests include AI-assisted applications and scalable system. </p>
-    </div>
+    <main>
+        <header>
+            <h1 class="page-title">Haoyu Liu</h1>
+            <div class="intro">
+                <img class="avatar" src="images/avatar-1.jpg" alt="my photo" width="200" height="200">
+                <p class="bio"> Hi, I'm Marco Liu, a Master's student in Computer Science at UC San Diego. I'm a Full Stack Developer experienced in both Frontend (React, Typescript, Next.js) and backend (Node.js, Express, Nest.js, Python, Spring Boot). My expertise also extends to database management with MySQL, PostgreSQL, and MongoDB, as well as cloud services with AWS and Azure. My current interests include AI-assisted applications and scalable system. </p>
+            </div>
+        </header>
+
+        <section class="github-section">
+            <h2 class="section-title">My Github Stats</h2>
+            <div id="profile-stats" class="stats-container"></div>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-title">Latest Projects</h2>
+            <div class="projects">
+                <!-- Dynamically added content will appear here -->
+            </div>
+        </section>
+    </main>
+
     <script type="module" src="./global.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

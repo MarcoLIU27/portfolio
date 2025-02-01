@@ -155,3 +155,68 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bio {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+/* GitHub统计部分 */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+#profile-stats {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    font-family: sans-serif;
+}
+
+#profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+}
+
+#profile-stats dt {
+    grid-row: 1;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: grey;
+}
+
+#profile-stats dd {
+    grid-row: 2;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}

@@ -1,0 +1,134 @@
+[
+    {
+        "title": "curaJOY",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed an inclusive, gamified, and AI-assisted platform for enhancing family behavioral wellness, building 10+ reusable UI components with React, Next.js, TypeScript, and PrimeReact, while enhancing UI with Tailwind CSS. Enhanced user-interactive 3D avatars with Three.js, incorporating animations, advanced visuals, and seamless integration with a sophisticated behavior, mood, and body check-in system, boosting user satisfaction by 40%. Built and optimized reward and check-in systems with Redux modules, handling asynchronous data fetching, complex state updates, and user interaction logic, resulting in a 20% improvement in app performance and increased retention rates."
+    },
+    {
+        "title": "Orbiz.app",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed an LLM-powered, data-driven platform and a Chrome extension to streamline influencer outreach and campaign creation, reducing manual effort by 15 hours/week and improving marketing campaign efficiency. Designed and implemented scalable database schemas using PostgreSQL and TypeORM, leveraging hierarchical relationships and entity mappings to optimize complex workflows for campaign creation and influencer matching. Integrated APIs with Azure OpenAI to scrape websites, analyze products to generate campaign suggestions and relevant tags."
+    },
+    {
+        "title": "Tellus AI Assessment Platform",
+        "year": "2023",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Designed and constructed E-R diagrams, UML class diagrams, and database schema based on use cases. Integrated Microsoft Azure AI Face Service and Python libraries/frameworks (e.g., OpenCV, MediaPipe, DeepFace) to facilitate facial, emotion, accessory, and body language analysis, boosting analysis accuracy by 30%. Utilized React, TypeScript, and Material UI to create real-time camera calibration feature and visualization dashboard."
+    },
+    {
+        "title": "Deep Learning-Based Time Series Analysis and Forecasting",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Built a large-scale repository for time-series analysis and forecasting on GitHub, including different state-of-the-art deep learning models. Collaborated on creating a systematic pipeline to utilize and evaluate time series prediction models, implementing unified data preprocessing procedures, model instantiation interfaces, and standardized evaluation procedures. Reproduced and implemented various spatio-temporal traffic prediction models and dataset loaders."
+    },
+    {
+        "title": "Simultaneously Deblurring and Segmentation for Cataract Surgical Instruments",
+        "year": "2021",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Worked on a spatio-temporal information-based network for cataract surgical instrument segmentation, consisting of a deblurring module and a subsequent segmentation module, with PyTorch and TensorFlow frameworks. Improved the performance of the segmentation network by incorporating leading-edge deep learning modules. Designed and conducted experiments on model evaluation and comparison."
+    },
+    {
+        "title": "CU Walk: A Mobile Application",
+        "year": "2023",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed an Android mobile application for campus walking route recommendation and sport recording in Java, using Android Studio. Created user-friendly interfaces with fragment display, incorporating a panoramic map of CUHK campus using Google Map API and interactive map markers for route guidance. Developed route recommendation and navigation feature."
+    },
+    {
+        "title": "Online Book Ordering System",
+        "year": "2023",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Built an online ordering system for books in Java, using JDBC with Oracle database. Designed and constructed E-R diagrams and relational schemas. Created SQL commands for book search, order placement, order updates, and order history queries."
+    },
+    {
+        "title": "Space Travel Game",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Implemented a Space Travel Game based on OpenGL and C++ from scratch, including object rendering, transformation, lighting, texture mapping, skybox, shader, and interaction."
+    },
+    {
+        "title": "The Prediction of Summer Olympics Medal Counts",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Predicted countries' summer Olympics medal counts based on different fields of data. Applied various data processing and analysis techniques, such as correlation analysis, to analyze possible factors contributing to the summer Olympics medal counts. Implemented Linear Regression, Decision Tree, and Neural Network Classifiers to predict 2020 Tokyo Olympic medal counts."
+    },
+    {
+        "title": "Yinsh Game AI Agent",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Implemented an autonomous agent that can play and compete in a tournament for the game Yinsh. Applied various AI techniques, including Monte Carlo Tree Search, Alpha-beta Pruning Minimax, A Star, and Greedy BFS. Designed heuristic functions and reward shaping on nodes expansion to improve the performance of the agent."
+    },
+    {
+        "title": "\"Oh! Heaven\" Game",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Applied software engineering knowledge, design patterns, and principles (e.g., Strategy Factory, Singleton, Information Expert, Polymorphism, and Observer) to refactor and extend the system of the game to support new behaviors. Plotted the UML design class diagram to reflect the actual implementation of the changed system and the design sequence diagram to demonstrate how the software objects collaborated."
+    },
+    {
+        "title": "Twitter Sentiment Prediction",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed a Twitter sentiment classifier based on the given dataset. Implemented different machine learning methods, including Naïve Bayes, Logistic Regression, SVM, and Stacking Model, compared and analyzed their performances, advantages, and limitations on this task. Ranked 8th out of 343 groups in the Kaggle prediction competition of the course."
+    },
+    {
+        "title": "\"Snakes and Ladders on a Plane\" Game",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Applied software engineering knowledge, design patterns, and principles to refactor and extend the system of the game to support new behaviors. Plotted the domain class diagram and design class diagram to reflect the actual implementation of the changed system, and the design sequence diagram to demonstrate how the software objects collaborated."
+    },
+    {
+        "title": "Diabetes-Home: A Diabetes Management Web Application",
+        "year": "2022",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed a web application for patient-clinician data management and deployed the website on Heroku/Render. Designed and implemented frontend UX/UI using Adobe XD, Handlebars, CSS, and JavaScript with responsive design. Implemented authentication and authorization using Passport.js and role-based redirection upon login."
+    },
+    {
+        "title": "MLFQ Scheduler",
+        "year": "2021",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Implemented a Multilevel Feedback Queue (MLFQ) scheduler in C according to the given scheduling rules, process information, and queue information based on the framework. The scheduler passed all the test cases and got full marks in the evaluation."
+    },
+    {
+        "title": "Research on Daily Activities and Sleep Quality",
+        "year": "2021",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Proposed the idea and methodologies for investigating the relationships between college students’ daily activities and sleep quality. Collected, plotted, and analyzed the raw data from online questionnaires. Exploited conditional possibilities to indicate the most suitable activity time intervals to improve sleep quality."
+    },
+    {
+        "title": "A Smart Walking Stick: \"Eye-Cane\"",
+        "year": "2021",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Proposed the idea of an innovation: an intelligent walking stick for the visually impaired to travel, designed its appearance and general functions. Investigated the working principles and technical specifications of the technologies used in the innovation. Designed the prototype and proposed a project development plan including the schedule, resources, and budget."
+    },
+    {
+        "title": "Surveillance vs. Privacy",
+        "year": "2021",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Studied digital privacy and the role of surveillance. Investigated how electronic products monitor people's behaviors, possible consequences of privacy disclosure, and explored ways to prevent privacy exposure. Finished a report article and submitted it to the department student forum."
+    },
+    {
+        "title": "Reversi Game",
+        "year": "2020",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Built a board game Reversi using Java based on the GUI and basic frame, implemented functions to judge valid moves and the end of the game. Implemented an extension to the basic game to allow the user to load a game board from a file using inheritance, and save current game board and current player setting on window closing."
+    },
+    {
+        "title": "Data Analysis and Fraudulent Detection via Benford's Law",
+        "year": "2020",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Collected and analyzed a variety of data in different fields from professional statistical websites, classifying the data types into those that may or may not obey Benford's law. Collected real-world data from social media platforms, votes, and stock markets using Python, and analyzed them by different verification methods to detect potential fraud according to Benford's Law."
+    },
+    {
+        "title": "Conway's Game of Life and Turing-completeness",
+        "year": "2020",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Implemented Conway's Game of Life in Python. Reproduced the proof of Turing-completeness of Conway's Game of Life using equivalent conditions and logical gates. Studied the patterns, features, and Turing-completeness of different cellular automatons such as Rule 110."
+    },
+    {
+        "title": "Checkers AI Player Program",
+        "year": "2019",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed a checkers program in C that supports both human-human and human-AI player modes. Implemented the Alpha-beta pruning algorithm to allow AI players to execute the best strategy within 5 seconds on a lab PC. Ranked 2nd out of 45 students in the AI player tournament of the course."
+    }
+]
