@@ -57,8 +57,8 @@ document.body.insertAdjacentHTML(
 const select = document.querySelector("#theme-selector");
 
 function setColorScheme(scheme) {
-    document.documentElement.style.setProperty("color-scheme", scheme);
-    select.value = scheme;
+  document.documentElement.style.setProperty("color-scheme", scheme);
+  select.value = scheme;
 }
 
 const savedScheme = localStorage.getItem("colorScheme") || "light dark";
@@ -66,34 +66,34 @@ setColorScheme(savedScheme);
 
 // Event listener to change theme and save preference
 select.addEventListener("input", function (event) {
-    const newScheme = event.target.value;
-    setColorScheme(newScheme);
-    localStorage.setItem("colorScheme", newScheme);
+  const newScheme = event.target.value;
+  setColorScheme(newScheme);
+  localStorage.setItem("colorScheme", newScheme);
 });
 
 // Fix the contact form
 const form = document.querySelector("#contact-form");
 
 form?.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+  event.preventDefault(); // Prevent default form submission
 
-    const data = new FormData(form);
+  const data = new FormData(form);
 
-    let mailtoURL = form.action + "?";
-    let params = [];
-    for (let [name, value] of data) {
-      params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
-    }
-    mailtoURL += params.join("&");
+  let mailtoURL = form.action + "?";
+  let params = [];
+  for (let [name, value] of data) {
+    params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
+  }
+  mailtoURL += params.join("&");
 
-    // Open the mail client
-    location.href = mailtoURL;
+  // Open the mail client
+  location.href = mailtoURL;
 });
 
 
 export async function fetchJSON(url) {
   try {
-      // Fetch the JSON file from the given URL
+    // Fetch the JSON file from the given URL
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch projects: ${response.statusText}`);
@@ -104,7 +104,7 @@ export async function fetchJSON(url) {
 
 
   } catch (error) {
-      console.error('Error fetching or parsing JSON data:', error);
+    console.error('Error fetching or parsing JSON data:', error);
   }
 }
 
@@ -114,8 +114,10 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${p.title}</${headingLevel}>
-        <img src="${p.image}" alt="${p.title}">
+      <img src="${p.image}" alt="${p.title}">
+      <div class="description-container">
         <p>${p.description}</p>
+        <span class="project-year">${p.year}</span>
       </div>
     `;
     containerElement.append(article);
