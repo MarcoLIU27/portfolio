@@ -9,7 +9,7 @@ html {
 
 body {
     /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
+         and use the OS's UI font as the website font
        */
     font: 100%/1.5 system-ui;
     max-width: 120ch;
@@ -208,14 +208,13 @@ nav a:hover {
 
 #profile-stats dt {
     grid-row: 1;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
     color: grey;
 }
 
 #profile-stats dd {
     grid-row: 2;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -309,20 +308,31 @@ nav a:hover {
 
 &:has(path:hover) {
     path:not(:hover) {
-      opacity: 0.5;
+        opacity: 0.5;
     }
 }
+
 path {
     transition: 300ms;
 }
+
 .selected {
     --color: oklch(60% 45% 0) !important;
-  
+
     &:is(path) {
-      fill: var(--color);
+        fill: var(--color);
     }
 }
 
 path {
     cursor: pointer;
+}
+
+.gridlines line {
+    stroke: currentColor;
+    opacity: 0.1;
+}
+
+.gridlines path {
+    display: none;
 }
