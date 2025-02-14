@@ -4,6 +4,8 @@ let commits = [];
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
     createScatterplot();
+    updateTooltipVisibility(false);
+    brushSelector();
 });
 
 async function loadData() {
@@ -26,7 +28,7 @@ function processCommits() {
             let { author, date, time, timezone, datetime } = first;
             let ret = {
                 id: commit,
-                url: 'https://github.com/vis-society/lab-7/commit/' + commit,
+                url: 'https://github.com/MarcoLIU27/portfolio/commit/' + commit,
                 author,
                 date,
                 time,
@@ -142,16 +144,33 @@ function createScatterplot() {
 
     const dots = svg.append('g').attr('class', 'dots');
 
+    const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+    const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([7, 30]); // adjust these values based on your experimentation
+    // Sort commits by total lines in descending order
+    const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+
     dots
         .selectAll('circle')
-        .data(commits)
+        .data(sortedCommits)
         .join('circle')
         .attr('cx', (d) => xScale(d.datetime))
         .attr('cy', (d) => yScale(d.hourFrac))
-        .attr('r', 5)
+        .attr('r', (d) => rScale(d.totalLines))
+        .style('fill-opacity', 0.7) // Add transparency for overlapping dots
         .attr('fill', d => {
             const hour = d.datetime.getHours();
             return (hour >= 6 && hour < 18) ? 'orange' : 'steelblue';
+        })
+        .on('mouseenter', (event, commit) => {
+            updateTooltipContent(commit);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+            d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
+        })
+        .on('mouseleave', () => {
+            updateTooltipContent({});
+            updateTooltipVisibility(false);
+            d3.select(event.currentTarget).style('fill-opacity', 0.7); // Restore transparency
         });
 
     // Add gridlines BEFORE the axes
@@ -167,12 +186,53 @@ function createScatterplot() {
 function updateTooltipContent(commit) {
     const link = document.getElementById('commit-link');
     const date = document.getElementById('commit-date');
-  
+
     if (Object.keys(commit).length === 0) return;
-  
+
     link.href = commit.url;
     link.textContent = commit.id;
     date.textContent = commit.datetime?.toLocaleString('en', {
-      dateStyle: 'full',
+        dateStyle: 'full',
     });
+}
+
+function updateTooltipVisibility(isVisible) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
+}
+
+function updateTooltipPosition(event) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.style.left = `${event.clientX}px`;
+    tooltip.style.top = `${event.clientY}px`;
+}
+
+// Create brush
+let brushSelection = null;
+
+function brushSelector() {
+    const svg = document.querySelector('svg');
+    d3.select(svg).call(d3.brush().on('start brush end', brushed));
+
+    // Raise dots and everything after overlay
+    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
+} 
+
+
+function brushed(event) {
+  brushSelection = event.selection;
+  updateSelection();
+}
+
+function isCommitSelected(commit) {
+  if (!brushSelection) {
+    return false;
   }
+  // TODO: return true if commit is within brushSelection
+  // and false if not
+}
+
+function updateSelection() {
+  // Update visual state of dots based on selection
+  d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
+}
