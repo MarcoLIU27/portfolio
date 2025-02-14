@@ -387,14 +387,49 @@ circle:hover {
 
 @keyframes marching-ants {
     to {
-      stroke-dashoffset: -8; /* 5 + 3 */
+        stroke-dashoffset: -8;
+        /* 5 + 3 */
     }
-  }
-  
+}
+
 .selection {
-fill-opacity: 0.1;
-stroke: black;
-stroke-opacity: 0.7;
-stroke-dasharray: 5 3;
-animation: marching-ants 2s linear infinite;
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+    fill: #ff6b6b;
+}
+
+#language-breakdown {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    font-family: sans-serif;
+}
+
+#language-breakdown dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+}
+
+#language-breakdown dt {
+    grid-row: 1;
+    font-size: 1.5rem;
+}
+
+#language-breakdown dd {
+    grid-row: 2;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#selection-count {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
 }
