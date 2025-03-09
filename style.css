@@ -433,3 +433,18 @@ circle.selected {
     font-weight: bold;
     color: #333;
 }
+
+#time-filter {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1em;
+}
+
+#time-filter time {
+    margin-left: auto;
+}
+
+#time-filter input {
+    margin: 0 1em;
+    width: 200px;
+}
